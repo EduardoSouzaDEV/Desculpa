@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desculpa, amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        #btn-yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #btn-no {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de desculpa">
+        <h1>Me desculpa?</h1>
+        <div class="buttons">
+            <button id="btn-yes">Sim</button>
+            <button id="btn-no">Não</button>
+        </div>
+        <p id="message" class="hidden">
+            Nas sombras de um erro, eu me perdi,
+            Palavras ditas que não deveriam sair.
+            No silêncio do coração, uma dor,
+            Por isso venho aqui, pedir seu amor.
+            <br>
+            Errei ao não ver o que tinha de bom,
+            Deixei escapar a luz do nosso tom.
+            Te amo tanto, mais do que posso dizer,
+            Com cada batida, só quero te ter.
+            <br>
+            Sei que falhei, e isso me entristece,
+            Mas meu amor por ti nunca esmorece.
+            Desculpa, amor, por te fazer sofrer,
+            Prometo que vou sempre te proteger.
+            <br>
+            Te dou meu coração, em mil pedaços,
+            Por favor, aceita esses meus laços.
+            Vamos juntos, mais fortes, reconstruir,
+            Porque ao seu lado, eu só quero existir.
+            
+            </p>
+    </div>
+
+    <script>
+        document.getElementById("btn-yes").addEventListener("click", function () {
+            document.getElementById("message").classList.remove("hidden");
+        });
+
+        document.getElementById("btn-no").addEventListener("click", function () {
+            // Mover o botão "Não" mais para longe
+            const btnNo = document.getElementById("btn-no");
+            const randomX = Math.random() * 200; // Move até 200px para a direita
+            const randomY = Math.random() * 100; // Move até 100px para baixo
+            btnNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        });
+    </script>
+</body>
+
+</html>
